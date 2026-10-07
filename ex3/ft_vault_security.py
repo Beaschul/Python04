@@ -1,5 +1,4 @@
 
-
 def secure_archive(filename: str, action: str = "r", content: str = "") -> tuple[bool, str]:
     try:
         if action == "r":
@@ -27,7 +26,7 @@ def main() -> None:
 
     print("Using 'secure_archive' to read from a regular file:")
     ok, data = secure_archive("ancient_fragment.txt")
-    print(ok, repr(data))
+    print(ok, data.replace("\n", "\\n"))
     print()
 
     print("Using 'secure_archive' to write previous content "
